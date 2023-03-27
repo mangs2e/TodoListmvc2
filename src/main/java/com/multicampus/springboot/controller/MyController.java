@@ -94,12 +94,8 @@ public class MyController {
 
     @GetMapping("list")
     public void list(PageRequestDTO pageRequestDTO, BindingResult bindingResult, Model model) {
-//        if(bindingResult.hasErrors()) {
-//            pageRequestDTO = PageRequestDTO.builder().build();
-//        }
         model.addAttribute("responseDTO",service.getList(pageRequestDTO));
         model.addAttribute("responseDTO",service.search(pageRequestDTO));
         System.out.println("Paging list");
-//        return "list";
     }
 }
