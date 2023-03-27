@@ -70,6 +70,7 @@
             $('.startDate').focus();
             return false;
         }
+        
         if (endDate == '') {
             alert("종료 날짜를 입력하세요");
             $('.endDate').focus();
