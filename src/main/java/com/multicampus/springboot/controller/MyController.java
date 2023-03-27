@@ -81,16 +81,16 @@ public class MyController {
         return "redirect:list";
     }
 
-    @GetMapping("search")
-    public String search(Model model, PageRequestDTO pageRequestDTO) {
-
-        model.addAttribute("responseDTO",service.search(pageRequestDTO));
-        System.out.println("search 성공");
-        System.out.println(pageRequestDTO.getStartDate());
-        System.out.println(pageRequestDTO.getEndDate());
-        System.out.println(pageRequestDTO.getSearchContent());
-        return "list";
-    }
+//    @GetMapping("search")
+//    public String search(Model model, PageRequestDTO pageRequestDTO) {
+//
+//        model.addAttribute("responseDTO",service.search(pageRequestDTO));
+//        System.out.println("search 성공");
+//        System.out.println(pageRequestDTO.getStartDate());
+//        System.out.println(pageRequestDTO.getEndDate());
+//        System.out.println(pageRequestDTO.getSearchContent());
+//        return "list";
+//    }
 
     @GetMapping("list")
     public void list(PageRequestDTO pageRequestDTO, BindingResult bindingResult, Model model) {
@@ -98,9 +98,8 @@ public class MyController {
 //            pageRequestDTO = PageRequestDTO.builder().build();
 //        }
         model.addAttribute("responseDTO",service.getList(pageRequestDTO));
+        model.addAttribute("responseDTO",service.search(pageRequestDTO));
         System.out.println("Paging list");
-        System.out.println(pageRequestDTO.getPage());
-        System.out.println(pageRequestDTO.getSize());
 //        return "list";
     }
 }
