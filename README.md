@@ -15,4 +15,4 @@ list.jsp에서 날짜 유효성 검사 실행(제이쿼리 이용해서 alert �
 로그 처리 추가 (logback 사용)
 
 #
-테스트 코드 추가 (Service 테스트)
+테스트 코드 추가 (Service 테스트!)
