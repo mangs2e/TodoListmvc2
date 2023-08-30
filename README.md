@@ -2,6 +2,7 @@ JAVA_MVC_TODOLIST
 
 SPRING / SPRING BOOT / MyBatis / MariaDB
 
+<!--
 #
 3/27
 
@@ -16,3 +17,4 @@ list.jsp에서 날짜 유효성 검사 실행(제이쿼리 이용해서 alert �
 
 #
 테스트 코드 추가 (Service 테스트!)
+-->
